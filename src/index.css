@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+.font-serif-arabic {
+  font-family: 'Amiri', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Subtle atmospheric lighting effects */
+@keyframes ambientPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.03); }
+}
+
+.animate-ambient-pulse {
+  animation: ambientPulse 8s ease-in-out infinite;
+}
+
+@keyframes dustFloat {
+  0% { transform: translateY(0px) translateX(0px); opacity: 0.15; }
+  50% { transform: translateY(-10px) translateX(5px); opacity: 0.3; }
+  100% { transform: translateY(0px) translateX(0px); opacity: 0.15; }
+}
+
+.animate-dust {
+  animation: dustFloat 12s ease-in-out infinite;
+}
+
+/* Custom inspection and interact cues */
+.game-hotspot {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.game-hotspot:hover {
+  filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.5));
+}

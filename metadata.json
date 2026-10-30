@@ -1,0 +1,6 @@
+{
+  "name": "The Last House - البيت الأخير",
+  "description": "لعبة غموض وهروب تفاعلية ثنائية الأبعاد من منظور الشخص الأول داخل منزل متوسطي قديم غامض.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
